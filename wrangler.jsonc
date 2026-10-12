@@ -1,0 +1,13 @@
+{
+  // Cloudflare Workers static assets config. No Worker code: this only serves the files in public/.
+  // The Worker name must match the Worker name in the Cloudflare dashboard (see DEPLOY.md).
+  "name": "khpathways",
+  "compatibility_date": "2026-10-12",
+  "assets": {
+    "directory": "./public",
+    // Serve /services (no trailing slash) directly, matching the existing Wix URLs.
+    "html_handling": "drop-trailing-slash",
+    // Unknown URLs get public/404.html with a 404 status.
+    "not_found_handling": "404-page"
+  }
+}

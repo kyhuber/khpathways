@@ -5,7 +5,8 @@ Static site for khpathways.com. Plain HTML and CSS: no framework, no build step,
 ```
 CLAUDE.md, CONTENT.md   the brief and the page copy (CONTENT.md is the source of truth for wording)
 README.md               this file
-DEPLOY.md               Cloudflare setup and DNS cutover (written after Cloudflare's current docs were checked)
+DEPLOY.md               Cloudflare setup and DNS cutover (checked against Cloudflare's docs)
+wrangler.jsonc          tells Cloudflare to serve public/ (no Worker code)
 GOOGLE-BUSINESS-PROFILE.md   Google profile and testimonial steps
 Kai-To-Do.md            open items for the owner
 source-assets/          original photos and logos. Never deployed, never edited in place.
@@ -52,4 +53,4 @@ Things to know:
 
 ## Deploy
 
-See `DEPLOY.md`. In short: Cloudflare, free plan, no build command, output directory `public`. The canonical host is `https://www.khpathways.com`.
+See `DEPLOY.md`. In short: a Cloudflare Worker with static assets (Cloudflare's current recommendation for new projects), free plan, no build command, serving `public/` as set in `wrangler.jsonc`. The canonical host is `https://www.khpathways.com`.
