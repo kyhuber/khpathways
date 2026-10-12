@@ -118,6 +118,7 @@ Canonical site address: **`https://www.khpathways.com`**. The bare `khpathways.c
 ### If something goes wrong
 
 - **Site shows an error right after the nameserver change:** DNS is still propagating (up to 24 hours), or a record is missing from the Cloudflare DNS page. Compare to your Wix screenshots.
+- **The test address shows "Hello world":** that's Cloudflare's placeholder, meaning no build of this repo has deployed yet. In the Worker, open **Deployments**, then **View build history**, and check that the newest build is for the latest commit on `main`. **Retry build** re-runs the same old commit, so push a new commit to `main` (or use a Deploy Hook under Settings, then Builds) to start a fresh one. Also check **Settings, then Builds, then Git branch** is `main`; builds of any other branch are previews, not the live site.
 - **Build fails in Cloudflare:** the Worker name in the dashboard doesn't match `name` in `wrangler.jsonc`, or "Build command" isn't empty.
 - **A page shows an old version:** hard-refresh. Static files are cached but always revalidated.
 - **Roll back a bad deploy:** Worker → **Deployments** (or **Versions**) → redeploy the previous version.

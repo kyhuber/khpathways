@@ -7,8 +7,9 @@ Work top to bottom. Check each item off as you go.
 
 ## Step 1: Test site on Cloudflare (safe; Wix stays live)
 
-- [ ] **Merge the follow-up pull request into `main`.** Pull request #1 was merged early, so `main` is missing everything after the first three commits, including `wrangler.jsonc`. Cloudflare deploys from `main`, which is why the first deploy failed. Ask Claude to open the new pull request, then merge it, then retry the Cloudflare deploy (Worker, then Deployments, then Retry build).
+- [x] ~~Merge the follow-up pull request into `main`.~~ Done (PR #2). `main` now has `wrangler.jsonc`.
 - [ ] **Do DEPLOY.md Part 1:** create the free Cloudflare account, connect the `khpathways` repo (name the project `khpathways`, leave the build command empty), and test on the `workers.dev` address. Nothing in this step touches your live Wix site.
+- [ ] **If the address shows "Hello world"** instead of the site, Cloudflare hasn't deployed our code yet. In the Worker, open **Deployments**, then **View build history**, and check that the newest build is for the latest commit on `main` and succeeded. "Retry build" re-runs the *same old commit*, so a new push to `main` is what starts a fresh build. Also check **Settings, then Builds, then Git branch** is `main`. See DEPLOY.md, "If something goes wrong".
 - [ ] **Click through the test site:** every page, the booking button, the email links, and a made-up address like `/nope` (should show the "Page not found" page).
 
 ## Step 2: Find out how Wix handles your domain (before changing anything)
