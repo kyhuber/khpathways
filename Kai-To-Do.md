@@ -1,22 +1,36 @@
 # To do: items I need from you
 
-Ordered by what unblocks the most. Check each off as you go.
+**Goal:** get www.khpathways.com off Wix and onto free hosting.
+**Decision made:** host on **Cloudflare** (a Worker serving the `public/` folder), with the code on GitHub. Not GitHub Pages, whose terms exclude online businesses. The full steps are in `DEPLOY.md`.
 
-## Cloudflare and the domain (see DEPLOY.md for the full steps)
+Work top to bottom. Check each item off as you go.
 
-- [x] ~~Allow `developers.cloudflare.com` in the Claude session.~~ Done. DEPLOY.md is written and checked against Cloudflare's docs.
+## Step 1: Test site on Cloudflare (safe; Wix stays live)
+
 - [ ] **Merge [pull request #1](https://github.com/kyhuber/khpathways/pull/1)** into `main` (Cloudflare deploys from `main`).
-- [ ] **Do DEPLOY.md Part 1** (create the free Cloudflare account, connect the repo, test on the `workers.dev` address). Nothing in this part touches your live Wix site.
-- [ ] **Check in Wix whether you can edit the nameservers** for khpathways.com (Domains, then Name servers, possibly under Advanced). This decides Route A or Route B in DEPLOY.md Part 2. Cloudflare's docs say Wix usually does not allow it. I could not read Wix's help pages from here, so I haven't confirmed that for your account.
-- [ ] **Screenshot your Wix DNS records** (especially any MX or TXT records), and note the domain's **registration date** and whether you changed its contact details in the last 60 days.
-- [ ] **Tell me what you find** and, if you like, paste the Cloudflare screens you get stuck on. I can walk through them.
+- [ ] **Do DEPLOY.md Part 1:** create the free Cloudflare account, connect the `khpathways` repo (name the project `khpathways`, leave the build command empty), and test on the `workers.dev` address. Nothing in this step touches your live Wix site.
+- [ ] **Click through the test site:** every page, the booking button, the email links, and a made-up address like `/nope` (should show the "Page not found" page).
 
-## Before launch
+## Step 2: Find out how Wix handles your domain (before changing anything)
+
+- [ ] **Check in Wix whether you can edit the nameservers** for khpathways.com (Domains, then Name servers, possibly under Advanced). This decides Route A or Route B in DEPLOY.md Part 2. Cloudflare's docs say Wix usually does not allow it. I couldn't read Wix's help pages from here, so I haven't confirmed that for your account.
+- [ ] **Screenshot your Wix DNS records** (especially any MX or TXT records), and note the domain's **registration date** and whether you changed its contact details in the last 60 days.
+- [ ] **Tell me what you find** (or paste any Cloudflare or Wix screen you get stuck on) and I'll walk through the next step.
+
+## Step 3: Move the domain (DEPLOY.md Parts 2 and 3)
+
+- [ ] Follow Route A or Route B, then attach `www.khpathways.com` and set up the bare-domain redirect.
+- [ ] Re-test every page on the real domain, including on your phone.
+
+## Step 4: Only then, retire Wix
+
+- [ ] **Cancel the Wix site plan** only after the new site is live on khpathways.com and verified. Check in Wix first what cancelling does to your domain registration. Moving the domain away from Wix (Route B) disconnects the Wix site.
+
+## Also before the domain move
 
 - [ ] **Click the booking link once** (`https://calendar.app.google/NVaX8nhezWKmJPHC7`) and make a test booking if you can. I can't reach Google Calendar from here, so I've only confirmed that every booking button points to it and opens in a new tab.
 - [ ] **Send a test email** to yourself from the `khpathways@gmail.com` links (home page, services page "Contact for a quote", disclaimer) to check the subject lines.
 - [ ] **Have your Wix login ready.** You'll need it for DNS or nameserver changes. **Do not change the domain's contact details** at Wix before or during the move. Wix reports a 60-day lock after that kind of change.
-- [ ] **Do not cancel Wix yet.** Cancel the Wix *site plan* only after the new site is live on khpathways.com and verified. Check in Wix first what cancelling does to your domain registration. Moving the domain away from Wix (Route B) disconnects the Wix site.
 
 ## Content decisions still open
 
