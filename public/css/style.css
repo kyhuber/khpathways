@@ -84,7 +84,7 @@ main > section { padding-block: clamp(2.5rem, 7vw, 5rem); }
 /* Services */
 .pkg { display: flex; flex-direction: column; }
 .pkg .num { font-size: 2.75rem; line-height: 1; font-weight: 300; color: var(--teal); margin-bottom: .5rem; }
-.pkg h3 { font-size: 1.35rem; }
+.pkg h2 { font-size: 1.35rem; }
 .pkg ul { padding-left: 1.2rem; margin: 0 0 1rem; }
 .pkg li { margin-bottom: .4rem; }
 .pkg .meta { margin-top: auto; padding-top: .75rem; border-top: 1px solid var(--line); font-weight: 600; margin-bottom: 0; }
