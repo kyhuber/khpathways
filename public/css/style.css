@@ -142,3 +142,4 @@ main > section { padding-block: clamp(2.5rem, 7vw, 5rem); }
 .closing.wave::before { background-image: url(/img/wave-strong.svg); }
 @media (min-width: 52rem) { .hero.motif-right::before { right: -14%; width: 38rem; } }
 @media (max-width: 51.99rem) { .hero::before { opacity: .08; } }
+.fineprint { font-size: .9rem; color: var(--muted); margin-top: 1.25rem; }

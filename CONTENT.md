@@ -20,19 +20,21 @@ Page title: Discover Financial Confidence with KH Pathways
 
 ### Navigate Your Financial Future With Confidence.
 
-My name is Kyle and I'm excited to empower you with the knowledge, tools, and strategies you need to feel confident about your finances. Working with me, clients learn to navigate the complex landscape of personal finance and build wealth.
+I'm Kyle, a financial confidence coach in Seattle. I teach you how your money works and give you the tools to manage it yourself, so your decisions come from clarity instead of worry.
 
 ### Ready to Take Control of Your Finances?
 
-Let's embark on this journey together. Head over to the "Work With Me" page to see how financial coaching can enable you to take steps today toward achieving your goals.
-
-Button: Book a Free Consultation
+Not sure where to start? See how coaching works on the "Work With Me" page, or book a free consultation to talk through where you are today.
 
 ## Get in Touch
 
-I look forward to guiding you on the path to financial success.
+Questions first? Email me, or book a free consultation.
 
-**[CHANGE]** The Wix site had a contact form here (First Name, Last Name, Email, Message). Replace it with the email address as a mailto link (subject: Financial Coaching Inquiry) and the Book a Free Consultation button. No form.
+Email link (mailto, subject: Financial Coaching Inquiry) and the Book a Free Consultation button.
+
+**[CHANGE]** The Wix site had a contact form here (First Name, Last Name, Email, Message). Replaced with the email address as a mailto link and the button. No form. The home page has a single booking button, in this section.
+
+**[CHANGE]** Home and Financial Confidence copy was redrafted by Kyle's approval (see git history for the original Wix wording).
 
 ---
 
@@ -42,44 +44,46 @@ Page title: Financial Confidence Starts Here | KH Pathways, LLC
 
 # Financial Confidence Starts Here
 
-Are you overwhelmed by financial decisions? Struggling to navigate your way to a secure financial future? I specialize in transforming financial confusion and anxiety into clarity and understanding. Let me guide you through your unique financial landscape, helping you overcome obstacles and achieve your goals with confidence.
+Money stress is often less about the math and more about not knowing where you stand. I help you replace avoidance and worry with a clear picture of your finances and a plan you understand and can run yourself.
 
 Button: Book a Free Consultation
 
 ## Overcoming Personal Finance Challenges
 
-Let's address some of the most common financial concerns that might be holding you back:
+Do any of these sound familiar?
 
-**Does It Make You Nervous to Login to Your Online Bank Account?**
-If checking your balance fills you with dread, you're not alone. Together, we can turn this fear into a foundation for financial empowerment with smart budgeting and proactive account management.
+**Dreading the login?**
+If checking your balance makes your stomach drop, you're not alone. We start by looking at the numbers together, then build a simple budgeting routine so checking in becomes ordinary.
 
-**Do You Feel Uncertain About Your Financial Future?**
-Tackle debt head-on with strategic management plans that not only reduce what you owe but also alleviate the anxiety associated with debt.
+**Is debt weighing on you?**
+We'll lay out what you owe, choose an order for paying it down, and set a plan you can follow. Seeing the whole picture often takes the edge off the worry.
 
-**Are You Confused About How to Grow Your Savings?**
-Learn how to make your money work for you through effective saving strategies and smart financial habits.
+**Not sure how to grow your savings?**
+Learn how saving works, set up habits that fit your income, and decide what your savings are for.
 
-**Do You Wonder If You'll Ever Be Able to Retire?**
-Retirement planning can seem daunting, but with the right strategies, you can build a secure future. Discover how early planning can make your retirement years truly golden.
+**Wondering if you'll ever retire?**
+Retirement planning can feel too big to start. We break it into steps, and starting early gives you more options.
 
-## Building a Strong Financial Foundation
+## Support for where you are
 
-To ensure your path to financial confidence is clear and manageable, I offer support tailored to your specific financial circumstances.
+Coaching is tailored to your circumstances.
 
-**For Aspiring Savers and Investors:**
-Start your investment journey on the right foot. Learn the basics and explore pathways to potentially grow your wealth.
+**Aspiring savers and investors:**
+Learn the basics of saving and investing so you can make informed choices of your own.
 
-**For Individuals Facing Financial Anxiety:**
-You deserve to sleep peacefully. Let's put in place robust financial plans that help mitigate fears and prepare you for unexpected events.
+**If financial worry keeps you up at night:**
+Build a clear plan and a cushion for the unexpected, so surprises feel manageable.
 
-**For Anyone Seeking Financial Empowerment:**
-Whether you're planning a major life event or simply aiming to improve your financial literacy, I provide personalized guidance to help you achieve your financial goals.
+**Anyone seeking financial empowerment:**
+Whether you're planning a major life event or just want to understand money better, I teach you what you need to know.
 
 ## Let's Build Your Success Path Together
 
-Are you ready to transform your relationship with money? Contact me today to schedule a free initial consultation, and let's start shaping your future with confidence.
+Ready to start? Book a free consultation and we'll talk through where you are and what you'd like to change.
 
-(Button: Book a Free Consultation, if it fits the layout.)
+Button: Book a Free Consultation
+
+Under the button: "Coaching is educational and is not financial advice. See the disclaimer." (disclaimer links to /disclaimer)
 
 ---
 
