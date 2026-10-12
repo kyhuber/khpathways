@@ -2,19 +2,21 @@
 
 Ordered by what unblocks the most. Check each off as you go.
 
-## Needed to finish DEPLOY.md
+## Cloudflare and the domain (see DEPLOY.md for the full steps)
 
-- [ ] **Allow Cloudflare's docs site in this Claude session.** I couldn't verify Cloudflare's current setup steps because this session's network policy blocks `developers.cloudflare.com` (403). In the cloud environment menu in the session title bar, choose **Edit**, then **Network access**. Either add `developers.cloudflare.com` under **Allowed domains** (leave "Allow package managers" ticked), or choose a broader access level. Steps: https://code.claude.com/docs/en/cloud-environments#network-access . Then tell me and I'll check the docs and write DEPLOY.md.
-  - Specifically, I'll confirm whether a static folder should go through Cloudflare Pages or Workers static assets right now, how the `www` and bare-domain setup works when your DNS is at Wix, and the apex-to-www redirect steps.
+- [x] ~~Allow `developers.cloudflare.com` in the Claude session.~~ Done. DEPLOY.md is written and checked against Cloudflare's docs.
+- [ ] **Merge [pull request #1](https://github.com/kyhuber/khpathways/pull/1)** into `main` (Cloudflare deploys from `main`).
+- [ ] **Do DEPLOY.md Part 1** (create the free Cloudflare account, connect the repo, test on the `workers.dev` address). Nothing in this part touches your live Wix site.
+- [ ] **Check in Wix whether you can edit the nameservers** for khpathways.com (Domains, then Name servers, possibly under Advanced). This decides Route A or Route B in DEPLOY.md Part 2. Cloudflare's docs say Wix usually does not allow it. I could not read Wix's help pages from here, so I haven't confirmed that for your account.
+- [ ] **Screenshot your Wix DNS records** (especially any MX or TXT records), and note the domain's **registration date** and whether you changed its contact details in the last 60 days.
+- [ ] **Tell me what you find** and, if you like, paste the Cloudflare screens you get stuck on. I can walk through them.
 
 ## Before launch
 
-- [ ] **Merge [pull request #1](https://github.com/kyhuber/khpathways/pull/1)** into `main` when you're happy. Cloudflare will deploy from `main`, so the site needs to be there first.
 - [ ] **Click the booking link once** (`https://calendar.app.google/NVaX8nhezWKmJPHC7`) and make a test booking if you can. I can't reach Google Calendar from here, so I've only confirmed that every booking button points to it and opens in a new tab.
 - [ ] **Send a test email** to yourself from the `khpathways@gmail.com` links (home page, services page "Contact for a quote", disclaimer) to check the subject lines.
-- [ ] **Create a free Cloudflare account** (dash.cloudflare.com) when DEPLOY.md is ready.
 - [ ] **Have your Wix login ready.** You'll need it for DNS or nameserver changes. **Do not change the domain's contact details** at Wix before or during the move. Wix reports a 60-day lock after that kind of change.
-- [ ] **Do not cancel Wix yet.** Cancel only after the new site is live and verified, and any domain transfer to Cloudflare Registrar comes last.
+- [ ] **Do not cancel Wix yet.** Cancel the Wix *site plan* only after the new site is live on khpathways.com and verified. Check in Wix first what cancelling does to your domain registration. Moving the domain away from Wix (Route B) disconnects the Wix site.
 
 ## Content decisions still open
 
