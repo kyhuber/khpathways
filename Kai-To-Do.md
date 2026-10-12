@@ -7,7 +7,7 @@ Work top to bottom. Check each item off as you go.
 
 ## Step 1: Test site on Cloudflare (safe; Wix stays live)
 
-- [ ] **Merge [pull request #1](https://github.com/kyhuber/khpathways/pull/1)** into `main` (Cloudflare deploys from `main`).
+- [ ] **Merge the follow-up pull request into `main`.** Pull request #1 was merged early, so `main` is missing everything after the first three commits, including `wrangler.jsonc`. Cloudflare deploys from `main`, which is why the first deploy failed. Ask Claude to open the new pull request, then merge it, then retry the Cloudflare deploy (Worker, then Deployments, then Retry build).
 - [ ] **Do DEPLOY.md Part 1:** create the free Cloudflare account, connect the `khpathways` repo (name the project `khpathways`, leave the build command empty), and test on the `workers.dev` address. Nothing in this step touches your live Wix site.
 - [ ] **Click through the test site:** every page, the booking button, the email links, and a made-up address like `/nope` (should show the "Page not found" page).
 
