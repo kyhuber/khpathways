@@ -143,3 +143,15 @@ main > section { padding-block: clamp(2.5rem, 7vw, 5rem); }
 @media (min-width: 52rem) { .hero.motif-right::before { right: -14%; width: 38rem; } }
 @media (max-width: 51.99rem) { .hero::before { opacity: .08; } }
 .fineprint { font-size: .9rem; color: var(--muted); margin-top: 1.25rem; }
+
+/* Home: background strip and package preview */
+.creds { padding-block: clamp(2rem, 5vw, 3rem) !important; }
+.creds h2 { font-size: 1.1rem; text-transform: uppercase; letter-spacing: .12em; color: var(--teal); margin-bottom: 1rem; }
+.cred-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 1rem; }
+@media (min-width: 40rem) { .cred-list { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 64rem) { .cred-list { grid-template-columns: repeat(4, 1fr); gap: 1.5rem; } }
+.cred-list li { border-left: 3px solid var(--teal); padding: .1rem 0 .1rem 1rem; line-height: 1.5; }
+.mini .num { font-size: 2rem; line-height: 1; font-weight: 300; color: var(--teal); margin-bottom: .4rem; }
+.mini h3 { font-size: 1.2rem; }
+.mini .meta { font-weight: 600; margin-top: .25rem; }
+.more { margin: 1.5rem 0 0; font-weight: 600; }
