@@ -18,15 +18,13 @@ Work top to bottom. Check each item off as you go.
 - [x] ~~Check the renewal date.~~ The domain is paid through **May 18, 2027**.
 - [x] ~~Decide timing.~~ **Move the site now** (the Premium plan costs $24/month), and **move the domain registration later**, before May 2027.
 
-## Step 3: Point the domain at Cloudflare (DEPLOY.md Parts 2 and 3, do soon)
+## Step 3: Point the domain at Cloudflare (DEPLOY.md Parts 2 and 3)
 
+- [x] ~~Add khpathways.com to Cloudflare, switch the nameservers in Wix, attach `www`, set up the redirect.~~ Done. Live on `https://www.khpathways.com`, checked from here: all five pages load, the bare domain redirects to `www` (paths and query strings kept), unknown pages show the 404 page, and the security headers are on.
 - [ ] **Check Wix Subscriptions for Google Workspace.** If it's listed there, tell me before cancelling anything.
-- [ ] **Add khpathways.com to Cloudflare** with **Connect a domain**, not Transfer (Free plan) and check that the 5 MX and 2 TXT records are there. Set the Wix A and `www` records to DNS only for now.
-- [ ] **Check DNSSEC in Wix.** If it's on, turn it off and wait 24 hours.
-- [ ] **In Wix, click "Use custom nameservers"** and enter Cloudflare's two.
-- [ ] **When Cloudflare says Active:** send a test email to your @khpathways.com address.
-- [ ] **Attach `www.khpathways.com`** to the Worker and set up the bare-domain redirect (Part 3).
-- [ ] **Re-test every page** on the real domain, including on your phone, and send one more test email.
+- [ ] **Send a test email** to your @khpathways.com address and confirm it arrives.
+- [ ] **Turn on Always Use HTTPS** in Cloudflare (khpathways.com, then SSL/TLS, then Edge Certificates), then check that `http://khpathways.com` ends up on `https://www.khpathways.com`.
+- [ ] **Click through the live site on your phone**, including the booking button and the email links.
 
 ## Step 4: Cancel the Wix plan (as soon as Step 3 checks out)
 
