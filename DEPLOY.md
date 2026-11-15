@@ -30,7 +30,7 @@ The free plan covers this: requests for static files are free and unlimited, and
 **Before you start:** merge pull request #1 into `main`. Cloudflare deploys from `main`.
 
 1. **Create an account.** Go to https://dash.cloudflare.com/sign-up and sign up with your email. Verify the email. Choose the **Free** plan whenever asked.
-2. **Connect the repo.** In the dashboard, go to **Workers & Pages** → **Create application** → next to **Import a repository** choose **Get started**.
+2. **Connect the repo.** In the dashboard, go to **Compute** → **Workers & Pages** → **Create application** → next to **Import a repository** choose **Get started**.
 3. Choose your **GitHub** account. If asked to install the Cloudflare GitHub app, allow access to **only** `kyhuber/khpathways` (not all repos).
 4. Select the `khpathways` repository.
 5. **Settings** (use these exactly):
@@ -96,7 +96,7 @@ Your Wix account allows custom nameservers, so this is straightforward: the doma
 
 Canonical site address: **`https://www.khpathways.com`**. The bare `khpathways.com` redirects to it.
 
-1. **Attach `www`.** In Cloudflare **DNS**, delete the `www` CNAME that points to `cdn3.wixdns.net` (a Custom Domain can't be added while it exists). Then **Workers & Pages** → your `khpathways` Worker → **Settings** → **Domains & Routes** → **Add** → **Custom Domain** → enter `www.khpathways.com` → **Add Custom Domain**. Cloudflare creates the DNS record and the HTTPS certificate for you.
+1. **Attach `www`.** In Cloudflare **DNS**, delete the `www` CNAME that points to `cdn3.wixdns.net` (a Custom Domain can't be added while it exists). Then **Compute** → **Workers & Pages** → your `khpathways` Worker → **Settings** → **Domains & Routes** → **Add** → **Custom Domain** → enter `www.khpathways.com` → **Add Custom Domain**. Cloudflare creates the DNS record and the HTTPS certificate for you.
 2. **Make the bare domain redirect.** Cloudflare's redirect rules only work on traffic that passes through Cloudflare, so the bare domain needs a placeholder record:
    - **DNS**: delete the three Wix `A` records (`185.230.63.x`). Then **Add record**: Type `A`, Name `@`, IPv4 `192.0.2.1`, Proxy status **Proxied** (orange cloud). (This address is a placeholder; traffic never reaches it.)
    - **Rules** → **Create rule** → **Redirect Rule**. Name it "Apex to www". Choose **Wildcard pattern**: when the request URL matches `https://khpathways.com/*`, redirect to `https://www.khpathways.com/${1}`, status **301**, **Preserve query string** on. Add a second rule for `http://khpathways.com/*` the same way, or use `http*://khpathways.com/*` with target `https://www.khpathways.com/${2}`.
