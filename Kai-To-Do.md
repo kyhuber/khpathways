@@ -24,13 +24,13 @@ Work top to bottom. Check each item off as you go.
 - [x] ~~Wix Subscriptions checked:~~ no Google Workspace. You don't use @khpathways.com email (only Gmail).
 - [x] ~~Always Use HTTPS turned on.~~
 - [x] ~~Checked on your phone.~~
-- [ ] **Optional: lock down email on the domain** (DEPLOY.md Part 4). The Google MX and SPF records are left over from a setup you don't use.
+- [x] ~~Lock down email on the domain.~~ Done: MX records removed, SPF set to `v=spf1 -all`, DMARC set to reject.
 
-## Step 4: Cancel the Wix plan (as soon as Step 3 checks out)
+## Step 4: Cancel the Wix plan
 
-- [ ] **Cancel the Premium Plan Light** in Wix Subscriptions. Cancel the site plan only, not the domain. Read the cancellation screen before confirming (DEPLOY.md Part 4).
+- [x] ~~Cancel the Premium Plan Light.~~ Done (November 15, 2026). The domain stays registered at Wix until the transfer.
 
-## Step 5: Move the domain registration (any time before early April 2027)
+## Step 5: Move the domain registration (calendar reminders set: Dec 7, 2026, and Mar 15, 2027)
 
 - [ ] **Transfer khpathways.com from Wix to Cloudflare Registrar** (DEPLOY.md Part 5). Do it a few weeks after the cutover, once things have run smoothly. Your site and email keep working during the transfer.
 
