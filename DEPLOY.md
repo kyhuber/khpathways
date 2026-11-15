@@ -82,7 +82,7 @@ Your Wix account allows custom nameservers, so this is straightforward: the doma
 ### Steps
 
 1. **Check Google Workspace billing.** In Wix, open **Subscriptions** (account menu). If **Google Workspace** is listed there, your email is billed through Wix. Tell me before cancelling anything; it would need to move to direct Google billing first. If it's not listed, you pay Google directly and nothing changes.
-2. **Add the domain to Cloudflare.** **Domains** → **Onboard a domain** → `khpathways.com` → **Free** plan.
+2. **Add the domain to Cloudflare.** **Domains** → **Connect a domain** (older screens say **Onboard a domain** or **Add a site**; not **Transfer a domain**, which is Part 5) → `khpathways.com` → **Free** plan.
 3. **Review the scanned DNS records** against the table above. Add anything missing (all 5 MX records with their priorities, both TXT records). For the Wix `A` records and the `www` CNAME, set **Proxy status** to **DNS only** (grey cloud). Leaving them in place means the Wix site keeps loading during the switch, so there is no gap.
 4. **Copy the two nameservers** Cloudflare shows you (they look like `name.ns.cloudflare.com`).
 5. **DNSSEC.** In Wix (**Domains** → `khpathways.com`), check whether DNSSEC is on. If it is, turn it off and wait 24 hours before step 6. Changing nameservers with DNSSEC on can take the domain offline.

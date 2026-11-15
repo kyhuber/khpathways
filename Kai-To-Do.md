@@ -21,7 +21,7 @@ Work top to bottom. Check each item off as you go.
 ## Step 3: Point the domain at Cloudflare (DEPLOY.md Parts 2 and 3, do soon)
 
 - [ ] **Check Wix Subscriptions for Google Workspace.** If it's listed there, tell me before cancelling anything.
-- [ ] **Add khpathways.com to Cloudflare** (Free plan) and check that the 5 MX and 2 TXT records are there. Set the Wix A and `www` records to DNS only for now.
+- [ ] **Add khpathways.com to Cloudflare** with **Connect a domain**, not Transfer (Free plan) and check that the 5 MX and 2 TXT records are there. Set the Wix A and `www` records to DNS only for now.
 - [ ] **Check DNSSEC in Wix.** If it's on, turn it off and wait 24 hours.
 - [ ] **In Wix, click "Use custom nameservers"** and enter Cloudflare's two.
 - [ ] **When Cloudflare says Active:** send a test email to your @khpathways.com address.
