@@ -8,30 +8,39 @@ Work top to bottom. Check each item off as you go.
 ## Step 1: Test site on Cloudflare (safe; Wix stays live)
 
 - [x] ~~Merge the follow-up pull request into `main`.~~ Done (PR #2). `main` now has `wrangler.jsonc`.
-- [ ] **Do DEPLOY.md Part 1:** create the free Cloudflare account, connect the `khpathways` repo (name the project `khpathways`, leave the build command empty), and test on the `workers.dev` address. Nothing in this step touches your live Wix site.
-- [ ] **If the address shows "Hello world"** instead of the site, Cloudflare hasn't deployed our code yet. In the Worker, open **Deployments**, then **View build history**, and check that the newest build is for the latest commit on `main` and succeeded. "Retry build" re-runs the *same old commit*, so a new push to `main` is what starts a fresh build. Also check **Settings, then Builds, then Git branch** is `main`. See DEPLOY.md, "If something goes wrong".
+- [x] ~~Do DEPLOY.md Part 1.~~ Done: the site is live on the `workers.dev` address.
 - [ ] **Click through the test site:** every page, the booking button, the email links, and a made-up address like `/nope` (should show the "Page not found" page).
 
-## Step 2: Find out how Wix handles your domain (before changing anything)
+## Step 2: Find out how Wix handles your domain
 
-- [ ] **Check in Wix whether you can edit the nameservers** for khpathways.com (Domains, then Name servers, possibly under Advanced). This decides Route A or Route B in DEPLOY.md Part 2. Cloudflare's docs say Wix usually does not allow it. I couldn't read Wix's help pages from here, so I haven't confirmed that for your account.
-- [ ] **Screenshot your Wix DNS records** (especially any MX or TXT records), and note the domain's **registration date** and whether you changed its contact details in the last 60 days.
-- [ ] **Tell me what you find** (or paste any Cloudflare or Wix screen you get stuck on) and I'll walk through the next step.
+- [x] ~~Check whether Wix lets you edit the nameservers.~~ Yes: "Use custom nameservers" is available. The domain can stay registered at Wix.
+- [x] ~~Export the Wix DNS records.~~ Done. They show Google Workspace email (5 MX records) and two Google TXT records. The full list is in DEPLOY.md Part 2.
+- [x] ~~Check the renewal date.~~ The domain is paid through **May 18, 2027**.
+- [x] ~~Decide timing.~~ **Move the site now** (the Premium plan costs $24/month), and **move the domain registration later**, before May 2027.
 
-## Step 3: Move the domain (DEPLOY.md Parts 2 and 3)
+## Step 3: Point the domain at Cloudflare (DEPLOY.md Parts 2 and 3, do soon)
 
-- [ ] Follow Route A or Route B, then attach `www.khpathways.com` and set up the bare-domain redirect.
-- [ ] Re-test every page on the real domain, including on your phone.
+- [ ] **Check Wix Subscriptions for Google Workspace.** If it's listed there, tell me before cancelling anything.
+- [ ] **Add khpathways.com to Cloudflare** (Free plan) and check that the 5 MX and 2 TXT records are there. Set the Wix A and `www` records to DNS only for now.
+- [ ] **Check DNSSEC in Wix.** If it's on, turn it off and wait 24 hours.
+- [ ] **In Wix, click "Use custom nameservers"** and enter Cloudflare's two.
+- [ ] **When Cloudflare says Active:** send a test email to your @khpathways.com address.
+- [ ] **Attach `www.khpathways.com`** to the Worker and set up the bare-domain redirect (Part 3).
+- [ ] **Re-test every page** on the real domain, including on your phone, and send one more test email.
 
-## Step 4: Only then, retire Wix
+## Step 4: Cancel the Wix plan (as soon as Step 3 checks out)
 
-- [ ] **Cancel the Wix site plan** only after the new site is live on khpathways.com and verified. Check in Wix first what cancelling does to your domain registration. Moving the domain away from Wix (Route B) disconnects the Wix site.
+- [ ] **Cancel the Premium Plan Light** in Wix Subscriptions. Cancel the site plan only, not the domain. Read the cancellation screen before confirming (DEPLOY.md Part 4).
+
+## Step 5: Move the domain registration (any time before early April 2027)
+
+- [ ] **Transfer khpathways.com from Wix to Cloudflare Registrar** (DEPLOY.md Part 5). Do it a few weeks after the cutover, once things have run smoothly. Your site and email keep working during the transfer.
 
 ## Also before the domain move
 
 - [ ] **Click the booking link once** (`https://calendar.app.google/NVaX8nhezWKmJPHC7`) and make a test booking if you can. I can't reach Google Calendar from here, so I've only confirmed that every booking button points to it and opens in a new tab.
 - [ ] **Send a test email** to yourself from the `khpathways@gmail.com` links (home page, services page "Contact for a quote", disclaimer) to check the subject lines.
-- [ ] **Have your Wix login ready.** You'll need it for DNS or nameserver changes. **Do not change the domain's contact details** at Wix before or during the move. Wix reports a 60-day lock after that kind of change.
+- [ ] **Have your Wix login ready.** You'll need it for the nameserver change and the later transfer. **Do not change the domain's contact details** at Wix until the transfer to Cloudflare is done. Any change starts a 60-day transfer lock.
 
 ## Content decisions still open
 
