@@ -116,6 +116,12 @@ Canonical site address: **`https://www.khpathways.com`**. The bare `khpathways.c
 3. **Google Search Console** (if you use it; the `google-site-verification` record suggests you do): add the property `https://www.khpathways.com` and submit `https://www.khpathways.com/sitemap.xml`.
 4. **Google Business Profile:** follow `GOOGLE-BUSINESS-PROFILE.md`.
 5. **Optional:** once you're happy, you can turn off the `*.workers.dev` address (Worker → Settings → Domains & Routes) so only the real domain serves the site. The page canonical tags already point to `www`, so the test address won't compete in search results.
+6. **Optional: stop others sending email as @khpathways.com.** You use Gmail, not email at this domain, and there is no Google Workspace subscription. So the 5 Google `MX` records and the Google SPF record are leftovers. With no DMARC record, it is easier for spammers to send mail that claims to come from your domain. In Cloudflare **DNS → Records**:
+   - Delete the 5 `MX` records.
+   - Edit the SPF `TXT` record to `v=spf1 -all` (no server may send mail for this domain).
+   - Add a `TXT` record, Name `_dmarc`, Content `v=DMARC1; p=reject;` (receiving mail servers should reject mail that claims to be from this domain).
+   - Keep the `google-site-verification` record.
+   - Your Gmail address is not affected. If you ever want email at khpathways.com, undo these and follow your email provider's setup.
 
 ### Part 5: Move the domain registration to Cloudflare (any time before May 2027)
 

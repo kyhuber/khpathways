@@ -21,10 +21,10 @@ Work top to bottom. Check each item off as you go.
 ## Step 3: Point the domain at Cloudflare (DEPLOY.md Parts 2 and 3)
 
 - [x] ~~Add khpathways.com to Cloudflare, switch the nameservers in Wix, attach `www`, set up the redirect.~~ Done. Live on `https://www.khpathways.com`, checked from here: all five pages load, the bare domain redirects to `www` (paths and query strings kept), unknown pages show the 404 page, and the security headers are on.
-- [ ] **Check Wix Subscriptions for Google Workspace.** If it's listed there, tell me before cancelling anything.
-- [ ] **Send a test email** to your @khpathways.com address and confirm it arrives.
-- [ ] **Turn on Always Use HTTPS** in Cloudflare (khpathways.com, then SSL/TLS, then Edge Certificates), then check that `http://khpathways.com` ends up on `https://www.khpathways.com`.
-- [ ] **Click through the live site on your phone**, including the booking button and the email links.
+- [x] ~~Wix Subscriptions checked:~~ no Google Workspace. You don't use @khpathways.com email (only Gmail).
+- [x] ~~Always Use HTTPS turned on.~~
+- [x] ~~Checked on your phone.~~
+- [ ] **Optional: lock down email on the domain** (DEPLOY.md Part 4). The Google MX and SPF records are left over from a setup you don't use.
 
 ## Step 4: Cancel the Wix plan (as soon as Step 3 checks out)
 
